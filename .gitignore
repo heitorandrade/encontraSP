@@ -1,0 +1,11 @@
+.next
+node_modules
+dist
+coverage
+*.log
+.env
+README.md
+AGENTS.md
+
+# Version the Pencil layout source files.
+!*.pen
