@@ -14,6 +14,14 @@ export type EntrepreneurTag =
   | "B2B"
   | "Atendimento presencial";
 
+export interface EntrepreneurService {
+  id: string;
+  name: string;
+  description: string;
+  price: string;
+  image: string;
+}
+
 export interface Entrepreneur {
   id: string;
   name: string;
@@ -27,4 +35,13 @@ export interface Entrepreneur {
   contactUrl: string;
   address: string;
   phone: string;
+  contacts: {
+    whatsapp: string;
+    email: string;
+    instagram: string;
+    website: string;
+  };
+  services: EntrepreneurService[];
 }
+
+export type EntrepreneurSummary = Omit<Entrepreneur, "description" | "contacts" | "services">;

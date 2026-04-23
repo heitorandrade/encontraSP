@@ -7,9 +7,9 @@ interface SearchBarProps {
 
 export function SearchBar({ locationValue, queryValue, onLocationChange, onQueryChange }: SearchBarProps) {
   return (
-    <div className="grid gap-3 lg:grid-cols-[minmax(240px,0.85fr)_minmax(0,1.15fr)]">
-      <label className="flex w-full items-center gap-3 rounded-xl border border-black/10 bg-white px-4 py-3 transition focus-within:border-sky-300 focus-within:ring-2 focus-within:ring-sky-100">
-        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/55">Onde voce esta?</span>
+    <div className="grid gap-2 md:grid-cols-[minmax(0,0.9fr)_minmax(0,1.1fr)_auto]">
+      <label className="grid gap-1 rounded-2xl border border-black/8 bg-white px-3 py-2.5 transition focus-within:border-sky-300 focus-within:ring-2 focus-within:ring-sky-100">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/48">Onde voce esta</span>
         <input
           className="w-full bg-transparent text-sm text-ink outline-none placeholder:text-ink/35"
           type="search"
@@ -19,8 +19,8 @@ export function SearchBar({ locationValue, queryValue, onLocationChange, onQuery
         />
       </label>
 
-      <label className="flex w-full items-center gap-3 rounded-xl border border-black/10 bg-white px-4 py-3 transition focus-within:border-sky-300 focus-within:ring-2 focus-within:ring-sky-100">
-        <span className="text-xs font-semibold uppercase tracking-[0.18em] text-ink/55">O que voce procura?</span>
+      <label className="grid gap-1 rounded-2xl border border-black/8 bg-white px-3 py-2.5 transition focus-within:border-sky-300 focus-within:ring-2 focus-within:ring-sky-100">
+        <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/48">O que voce procura</span>
         <input
           className="w-full bg-transparent text-sm text-ink outline-none placeholder:text-ink/35"
           type="search"
@@ -29,6 +29,13 @@ export function SearchBar({ locationValue, queryValue, onLocationChange, onQuery
           placeholder="Nome, categoria ou especialidade"
         />
       </label>
+
+      <button
+        type="button"
+        className="inline-flex items-center justify-center rounded-2xl bg-ink px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#16202d] md:min-w-[170px]"
+      >
+        Buscar negocios
+      </button>
     </div>
   );
 }
