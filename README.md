@@ -17,6 +17,7 @@ Frontend MVP para descoberta de negocios cadastrados no Sebrae, com foco em cata
 - `src/types`: tipagens do dominio
 - `scripts/start-local.ps1`: automacao local de build + restart + validacao
 - `encontra_sp_frames_v2.pen`: wireframes desktop e mobile
+- `src/Maps_referencia.png`: imagem de referencia usada no bloco de localizacao do perfil
 
 ## Como rodar
 
@@ -39,6 +40,7 @@ Esse comando:
 - sobe uma nova instancia local
 - valida `HTTP 200`
 - valida a home por marcadores basicos de conteudo
+- deixa o servico pronto para abrir em `http://localhost:3000`
 
 Depois abra:
 
@@ -60,6 +62,16 @@ Ou, para validacao local mais estavel:
 npm run preview
 ```
 
+Use `npm run preview` quando quiser testar a versao local com `next start` em vez de `next dev`.
+
+## Fluxo Recomendado
+
+Na pratica, o fluxo mais confiavel para este projeto e:
+
+1. `npm run start:local`
+2. Abrir `http://localhost:3000`
+3. Reiniciar com `npm run start:local` se houver qualquer instabilidade na porta ou na pagina
+
 ## Funcionalidades atuais
 
 - home responsiva com desktop e mobile
@@ -70,6 +82,7 @@ npm run preview
 - retorno para a home via `Fechar`
 - lista de servicos com foco principal da pagina
 - bloco de localizacao e contatos
+- perfil com bloco de mapa de referencia e CTA de retorno para a home
 
 ## Arquivos de design
 

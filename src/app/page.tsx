@@ -86,9 +86,9 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-white pb-14">
       <section className="border-b border-black/6 bg-white">
-        <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3 sm:px-5 lg:px-6">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-3 py-3 sm:px-4 lg:px-[18px]">
           <div className="space-y-0.5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ink">Encontra SP</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink sm:text-[14px]">Encontra SP</p>
             <p className="text-[11px] text-ink/42">Descoberta local</p>
           </div>
           <div className="hidden items-center gap-4 text-[11px] text-ink/44 md:flex">
@@ -99,7 +99,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1280px] px-4 pb-5 pt-4 sm:px-5 lg:px-6 lg:pt-5">
+      <section className="mx-auto max-w-[1440px] px-3 pb-5 pt-4 sm:px-4 lg:px-[18px] lg:pt-5">
         <div className="space-y-3">
           <div className="space-y-2">
             <p className="text-[11px] font-medium text-[#3157d5]">Descoberta local</p>
@@ -130,7 +130,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1280px] px-4 sm:px-5 lg:px-6">
+      <section className="mx-auto max-w-[1440px] px-3 sm:px-4 lg:px-[18px]">
         <div className="rounded-[22px] bg-[#fafafa] p-3 sm:p-4">
           <div className="mb-2 flex items-center justify-between gap-3">
             <div>
@@ -184,7 +184,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1280px] px-4 pb-10 pt-6 sm:px-5 lg:px-6">
+      <section className="mx-auto max-w-[1440px] px-3 pb-10 pt-6 sm:px-4 lg:px-[18px]">
         <div className="mb-3 flex items-center justify-between gap-4">
           <div>
             <h2 className="text-lg font-semibold tracking-tight text-ink sm:text-[22px]">Negocios em destaque</h2>

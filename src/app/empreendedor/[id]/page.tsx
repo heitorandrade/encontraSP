@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 
+import mapReference from "@/Maps_referencia.png";
 import { Tag } from "@/components/Tag";
 import { entrepreneurs } from "@/data/entrepreneurs";
 
@@ -21,9 +23,9 @@ export default async function EntrepreneurPage({ params }: EntrepreneurPageProps
   return (
     <main className="min-h-screen bg-white pb-10">
       <section className="border-b border-black/6 bg-white">
-        <div className="mx-auto flex max-w-[1280px] items-center justify-between px-4 py-3 sm:px-5 lg:px-6">
+        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-3 py-3 sm:px-4 lg:px-[18px]">
           <div className="space-y-0.5">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-ink">Encontra SP</p>
+            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink sm:text-[14px]">Encontra SP</p>
             <p className="text-[11px] text-ink/42">Perfil do negocio</p>
           </div>
 
@@ -37,7 +39,7 @@ export default async function EntrepreneurPage({ params }: EntrepreneurPageProps
         </div>
       </section>
 
-      <div className="mx-auto max-w-[1280px] px-4 pt-4 sm:px-5 lg:px-6 lg:pt-5">
+      <div className="mx-auto max-w-[1440px] px-3 pt-4 sm:px-4 lg:px-[18px] lg:pt-5">
         <div className="space-y-5">
           <div className="space-y-2">
             <h1 className="text-[26px] font-semibold leading-tight tracking-tight text-ink sm:text-[32px]">
@@ -121,7 +123,15 @@ export default async function EntrepreneurPage({ params }: EntrepreneurPageProps
               </a>
             </div>
 
-            <div className="aspect-[2.4/1] rounded-[18px] bg-[#eef0f3] sm:aspect-[4.3/1]" />
+            <div className="overflow-hidden rounded-[18px] bg-[#eef0f3]">
+              <Image
+                src={mapReference}
+                alt="Referencia visual de localizacao do mapa"
+                className="h-full w-full object-cover"
+                sizes="(max-width: 640px) 100vw, 1200px"
+                priority={false}
+              />
+            </div>
           </section>
 
           <section className="rounded-[18px] bg-[#fafafa] px-4 py-4">
