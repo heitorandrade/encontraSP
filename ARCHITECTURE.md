@@ -18,9 +18,11 @@ src/
     EntrepreneurCard.tsx
     Tag.tsx
   data/
+    entrepreneur-summaries.ts
     entrepreneurs.ts
   types/
     entrepreneur.ts
+  Maps_referencia.png
 ```
 
 
@@ -52,7 +54,8 @@ Componentes reutilizáveis de interface.
 ### data/
 Dados mockados utilizados no MVP.
 
-- `entrepreneurs.ts` é a fonte única da listagem e do perfil
+- `entrepreneur-summaries.ts` abastece a home com uma versao mais leve dos cards
+- `entrepreneurs.ts` deriva os dados completos do perfil a partir dos summaries
 
 ---
 
@@ -60,15 +63,17 @@ Dados mockados utilizados no MVP.
 Definição de tipos TypeScript para os dados.
 
 - `Entrepreneur` centraliza o shape consumido pela home, card e perfil
+- `EntrepreneurSummary` reduz o payload inicial da home
 
 ---
 
 ## Fluxo Atual
 
-- `app/page.tsx` consome `data/entrepreneurs.ts`
+- `app/page.tsx` consome `data/entrepreneur-summaries.ts`
 - a home deriva opções de filtro a partir dos mocks
 - os componentes de interface recebem props simples
-- o perfil em `empreendedor/[id]/page.tsx` resolve o item pelo `id`
+- o perfil em `empreendedor/[id]/page.tsx` resolve o item pelo `id` em `data/entrepreneurs.ts`
+- o perfil usa `src/Maps_referencia.png` como imagem do bloco de localizacao
 
 ---
 
@@ -86,3 +91,9 @@ Evitar:
 - stores globais
 - hooks abstratos sem necessidade
 - adapters ou presenters artificiais para este MVP
+
+## Direção de UI atual
+
+- home e perfil seguem o `encontra_sp_frames_v2.pen` como referencia visual principal
+- o header cinza metalico e a hierarquia desktop/mobile ja foram refletidos no codigo
+- o perfil prioriza servicos, com hero horizontal mais contextual

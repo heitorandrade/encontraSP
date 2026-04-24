@@ -103,6 +103,11 @@ const serviceCatalogByCategory: Record<EntrepreneurCategory, Omit<EntrepreneurSe
       name: "Estrutura digital inicial",
       description: "Setup leve com site institucional, canal de atendimento e base para campanhas.",
       price: "A partir de R$ 1.180"
+    },
+    {
+      name: "Portal de cliente",
+      description: "Area simples para centralizar acesso, pedidos e atualizacoes operacionais do negocio.",
+      price: "A partir de R$ 1.450"
     }
   ]
 };

@@ -17,7 +17,7 @@ interface FilterBarProps {
 }
 
 const selectClassName =
-  "w-full rounded-2xl border border-black/8 bg-white px-3 py-2.5 text-sm text-ink outline-none transition focus:border-sky-300 focus:ring-2 focus:ring-sky-100";
+  "w-full rounded-[12px] border border-[#e5e7eb] bg-white px-3 py-2.5 text-sm text-ink outline-none transition focus:border-sky-300 focus:ring-2 focus:ring-sky-100";
 
 export function FilterBar({
   isLocalized,
@@ -37,15 +37,15 @@ export function FilterBar({
   onSortOrderChange
 }: FilterBarProps) {
   return (
-    <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-[auto_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_auto]">
+    <div className="grid gap-2 md:grid-cols-2 xl:grid-cols-[190px_220px_minmax(0,1fr)_minmax(0,1fr)_minmax(0,1fr)_250px]">
       <button
         type="button"
         onClick={onToggleLocalized}
-        className={`rounded-2xl border px-3 py-2.5 text-left text-sm transition ${
-          isLocalized ? "border-sky-300 bg-sky-100 text-sky-900" : "border-black/8 bg-white text-ink hover:border-sky-200"
+        className={`rounded-[12px] border px-3 py-2.5 text-left text-sm transition ${
+          isLocalized ? "border-[#d3daf0] bg-[#eef2ff] text-[#3157d5]" : "border-[#e5e7eb] bg-white text-ink hover:border-sky-200"
         }`}
       >
-        <span className="block text-[11px] font-semibold uppercase tracking-[0.16em] opacity-60">Localizacao</span>
+        <span className="block text-[10px] font-medium opacity-60">Localizacao</span>
         <span className="mt-1 block font-medium">{isLocalized ? "Me localize ativo" : "Me localize"}</span>
       </button>
 

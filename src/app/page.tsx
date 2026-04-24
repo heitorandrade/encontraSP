@@ -85,29 +85,29 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-white pb-14">
-      <section className="border-b border-black/6 bg-white">
-        <div className="mx-auto flex max-w-[1440px] items-center justify-between px-3 py-3 sm:px-4 lg:px-[18px]">
+      <section className="bg-[#7f858d]">
+        <div className="mx-auto flex max-w-[1440px] items-start justify-between px-3 py-2.5 sm:px-4 lg:px-[18px]">
           <div className="space-y-0.5">
-            <p className="text-[13px] font-semibold uppercase tracking-[0.18em] text-ink sm:text-[14px]">Encontra SP</p>
-            <p className="text-[11px] text-ink/42">Descoberta local</p>
+            <p className="text-[17px] font-semibold uppercase tracking-[0.08em] text-white sm:text-[18px]">Encontra SP</p>
+            <p className="text-[10px] text-[#eef2f7]">catalogo profissional de negocios locais</p>
           </div>
-          <div className="hidden items-center gap-4 text-[11px] text-ink/44 md:flex">
+          <div className="hidden items-center gap-4 pt-1 text-[10px] text-white/90 md:flex">
             <span>catalogo</span>
-            <span>mapa</span>
-            <span>perfil</span>
+            <span>filtros</span>
+            <span>perfis</span>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] px-3 pb-5 pt-4 sm:px-4 lg:px-[18px] lg:pt-5">
-        <div className="space-y-3">
-          <div className="space-y-2">
-            <p className="text-[11px] font-medium text-[#3157d5]">Descoberta local</p>
-            <h1 className="max-w-3xl text-[28px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-[34px]">
+      <section className="mx-auto max-w-[1440px] px-3 pb-4 pt-4 sm:px-4 lg:px-[18px]">
+        <div className="space-y-4">
+          <div className="space-y-1.5">
+            <p className="text-[11px] font-semibold text-[#3157d5]">Descoberta local</p>
+            <h1 className="max-w-3xl text-[28px] font-semibold leading-[1.08] tracking-tight text-ink sm:text-[36px]">
               Encontre negocios perto de voce
             </h1>
-            <p className="max-w-3xl text-sm leading-6 text-ink/56">
-              Explore servicos cadastrados, refine por regiao e entenda rapidamente o que cada negocio oferece.
+            <p className="max-w-3xl text-[13px] leading-5 text-ink/56">
+              Wireframe de catalogo para busca por categoria, localizacao e especialidade, mantendo foco em decisao rapida e navegacao para o perfil.
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function HomePage() {
                 onClick={() => setSelectedCategory((current) => (current === category ? "" : category))}
                 className={`whitespace-nowrap rounded-full px-3 py-1.5 text-[11px] font-medium transition ${
                   selectedCategory === category
-                    ? "bg-[#e9f2ff] text-[#3157d5]"
+                    ? "bg-[#eef2ff] text-[#3157d5]"
                     : "bg-[#f4f5f7] text-ink/58 hover:bg-[#edf1f6]"
                 }`}
               >
@@ -131,18 +131,15 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-[1440px] px-3 sm:px-4 lg:px-[18px]">
-        <div className="rounded-[22px] bg-[#fafafa] p-3 sm:p-4">
+        <div className="rounded-[18px] bg-[#fafafa] p-3 sm:p-4">
           <div className="mb-2 flex items-center justify-between gap-3">
             <div>
-              <p className="text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/48">Busca e filtros</p>
-              <p className="mt-1 text-[11px] text-ink/42">
-                {isLocalized ? `Me localize ativo · ${selectedDistance >= 999 ? "10+ km" : `${selectedDistance} km`}` : "catalogo responsivo"}
-              </p>
+              <p className="text-[11px] font-semibold text-ink/72">Busca e filtros</p>
             </div>
             <button
               type="button"
               onClick={clearAllFilters}
-              className="rounded-full px-3 py-1.5 text-[11px] font-medium text-[#3157d5] transition hover:bg-[#edf5ff]"
+              className="rounded-full px-2 py-1 text-[11px] font-medium text-[#3157d5] transition hover:bg-[#edf5ff]"
             >
               Limpar tudo
             </button>
@@ -184,11 +181,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1440px] px-3 pb-10 pt-6 sm:px-4 lg:px-[18px]">
+      <section className="mx-auto max-w-[1440px] px-3 pb-10 pt-5 sm:px-4 lg:px-[18px]">
         <div className="mb-3 flex items-center justify-between gap-4">
           <div>
-            <h2 className="text-lg font-semibold tracking-tight text-ink sm:text-[22px]">Negocios em destaque</h2>
-            <p className="mt-1 text-[12px] text-ink/46">Leitura rapida para descoberta e acesso ao perfil</p>
+            <p className="text-[10px] font-semibold uppercase tracking-[0.16em] text-ink/34">Listagem</p>
+            <h2 className="text-lg font-semibold tracking-tight text-ink sm:text-[26px]">Negocios em destaque</h2>
           </div>
           <p className="text-[11px] text-ink/42">{visibleEntrepreneurs.length} resultados</p>
         </div>

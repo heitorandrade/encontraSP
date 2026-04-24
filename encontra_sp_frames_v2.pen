@@ -9,18 +9,18 @@
       "name": "encontraSP_perfil",
       "clip": true,
       "width": 2105,
-      "height": 1903,
+      "height": 1940,
       "fill": "#FFFFFF",
       "layout": "none",
       "children": [
         {
           "type": "frame",
           "id": "7NtgO",
-          "x": 60,
+          "x": 27,
           "y": 48,
           "name": "Perfil com Mapa",
           "width": 1988,
-          "height": 1800,
+          "height": 1840,
           "layout": "vertical",
           "gap": 18,
           "children": [
@@ -29,6 +29,12 @@
               "id": "dxEkk",
               "name": "head",
               "width": "fill_container",
+              "height": 130,
+              "fill": "#7F858D",
+              "padding": [
+                10,
+                16
+              ],
               "justifyContent": "space_between",
               "alignItems": "center",
               "children": [
@@ -42,16 +48,16 @@
                     {
                       "type": "text",
                       "id": "nk0Yi",
-                      "fill": "#111827",
+                      "fill": "#FFFFFF",
                       "content": "ENCONTRA SP",
                       "fontFamily": "Inter",
-                      "fontSize": 18,
+                      "fontSize": 24,
                       "fontWeight": "700"
                     },
                     {
                       "type": "text",
                       "id": "2oF1W",
-                      "fill": "#6B7280",
+                      "fill": "#EEF2F7",
                       "content": "perfil do negocio",
                       "fontFamily": "Inter",
                       "fontSize": 12,
@@ -62,11 +68,11 @@
                 {
                   "type": "text",
                   "id": "jFHno",
-                  "fill": "#9CA3AF",
-                  "content": "wireframe responsivo",
+                  "fill": "#FFFFFF",
+                  "content": "× Fechar",
                   "fontFamily": "Inter",
-                  "fontSize": 12,
-                  "fontWeight": "500"
+                  "fontSize": 15,
+                  "fontWeight": "700"
                 }
               ]
             },
@@ -103,7 +109,7 @@
               "cornerRadius": 22,
               "id": "mEXkz",
               "fill": "#E5E7EB",
-              "width": 1989,
+              "width": 1988,
               "height": 220
             },
             {
@@ -446,26 +452,6 @@
                       ]
                     }
                   ]
-                },
-                {
-                  "type": "frame",
-                  "id": "l8p2q",
-                  "x": 1960,
-                  "y": 40,
-                  "width": 8,
-                  "height": 684,
-                  "fill": "#EEF0F3",
-                  "cornerRadius": 999
-                },
-                {
-                  "type": "frame",
-                  "id": "r3wWa",
-                  "x": 1960,
-                  "y": 176,
-                  "width": 8,
-                  "height": 164,
-                  "fill": "#CBD5E1",
-                  "cornerRadius": 999
                 }
               ]
             },
@@ -522,7 +508,7 @@
                       "type": "frame",
                       "id": "WSsoY",
                       "name": "locCta",
-                      "fill": "#EAF3FF",
+                      "fill": "#EEF2FF",
                       "cornerRadius": 999,
                       "padding": [
                         10,
@@ -548,109 +534,120 @@
                   "id": "EtV5v",
                   "fill": "#E5E7EB",
                   "width": "fill_container",
-                  "height": 253
+                  "height": 210
                 },
                 {
-                  "type": "frame",
-                  "id": "1Junc",
-                  "name": "mapInfo",
-                  "width": "fill_container",
-                  "gap": 18,
-                  "children": [
-                    {
-                      "type": "frame",
-                      "id": "qUluz",
-                      "name": "mapAddr",
-                      "width": 1260,
-                      "layout": "vertical",
-                      "gap": 6,
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "R4XyG",
-                          "fill": "#111827",
-                          "content": "Endereco",
-                          "fontFamily": "Inter",
-                          "fontSize": 16,
-                          "fontWeight": "800"
-                        },
-                        {
-                          "type": "text",
-                          "id": "c7TTV",
-                          "fill": "#6B7280",
-                          "content": "Rua Conselheiro Moreira de Barros, 2450 - Santana, Sao Paulo - SP, 02430-001",
-                          "fontFamily": "Inter",
-                          "fontSize": 14,
-                          "fontWeight": "normal"
-                        }
-                      ]
-                    }
-                  ]
+                  "type": "text",
+                  "id": "indHF",
+                  "fill": "#6B7280",
+                  "content": "Rua Conselheiro Moreira de Barros, 2450 - Santana, Sao Paulo - SP, 02430-001",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             },
             {
               "type": "frame",
-              "id": "WblIB",
+              "id": "HRaGW",
               "name": "footer",
-              "width": "fill_container",
-              "fill": "#F7F8FA",
+              "width": 1988,
+              "height": 125,
+              "fill": "#ECEFF2",
               "cornerRadius": 16,
-              "gap": 16,
-              "padding": [
-                12,
-                18
-              ],
+              "layout": "none",
               "children": [
                 {
+                  "type": "text",
+                  "id": "vUe19",
+                  "x": 18,
+                  "y": 12,
+                  "fill": "#111827",
+                  "content": "Contatos",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "3YjAK",
+                  "x": 18,
+                  "y": 42,
+                  "fill": "#6B7280",
+                  "content": "WhatsApp: (11) 99999-0004 · E-mail: contato@eixobemestar.com · Instagram: @eixobemestar · Site: www.eixobemestar.com",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
                   "type": "frame",
-                  "id": "pzkbx",
-                  "name": "contacts",
-                  "width": 1260,
-                  "layout": "vertical",
+                  "id": "zHRJG",
+                  "x": 18,
+                  "y": 70,
+                  "name": "waAbs",
+                  "fill": "#EAF7EC",
+                  "cornerRadius": 999,
                   "gap": 8,
+                  "padding": [
+                    10,
+                    14
+                  ],
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
-                      "id": "fHCiP",
-                      "fill": "#111827",
-                      "content": "Contatos",
+                      "id": "8PRCH",
+                      "fill": "#2F7D46",
+                      "content": "Entrar em contato por WhatsApp",
                       "fontFamily": "Inter",
-                      "fontSize": 18,
-                      "fontWeight": "800"
-                    },
-                    {
-                      "type": "text",
-                      "id": "yrDvr",
-                      "fill": "#6B7280",
-                      "content": "WhatsApp: (11) 99999-0004 · E-mail: contato@eixobemestar.com · Instagram: @eixobemestar · Site: www.eixobemestar.com",
-                      "fontFamily": "Inter",
-                      "fontSize": 14,
-                      "fontWeight": "normal"
-                    },
-                    {
-                      "type": "frame",
-                      "id": "gcBuW",
-                      "name": "waCta",
-                      "fill": "#EAF7EC",
-                      "cornerRadius": 999,
-                      "padding": [
-                        10,
-                        14
-                      ],
-                      "children": [
-                        {
-                          "type": "text",
-                          "id": "EXJah",
-                          "fill": "#2F7D46",
-                          "content": "Entrar em contato por WhatsApp",
-                          "fontFamily": "Inter",
-                          "fontSize": 12,
-                          "fontWeight": "700"
-                        }
-                      ]
+                      "fontSize": 13,
+                      "fontWeight": "700"
                     }
                   ]
+                },
+                {
+                  "type": "text",
+                  "id": "CdwQB",
+                  "x": 1448,
+                  "y": 12,
+                  "fill": "#111827",
+                  "content": "Horario de funcionamento",
+                  "fontFamily": "Inter",
+                  "fontSize": 18,
+                  "fontWeight": "800"
+                },
+                {
+                  "type": "text",
+                  "id": "8OH9k",
+                  "x": 1448,
+                  "y": 44,
+                  "fill": "#6B7280",
+                  "content": "Segunda a sexta: 09:00 - 18:00",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "Jp9W5",
+                  "x": 1448,
+                  "y": 66,
+                  "fill": "#6B7280",
+                  "content": "Sabado: 09:00 - 13:00",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "text",
+                  "id": "VRGDD",
+                  "x": 1448,
+                  "y": 88,
+                  "fill": "#6B7280",
+                  "content": "Domingo: fechado",
+                  "fontFamily": "Inter",
+                  "fontSize": 14,
+                  "fontWeight": "normal"
                 }
               ]
             }
@@ -666,18 +663,19 @@
       "name": "encontraSP_home",
       "clip": true,
       "width": 2052,
-      "height": 1903,
+      "height": 1960,
       "fill": "#FFFFFF",
       "layout": "none",
       "children": [
         {
           "type": "frame",
           "id": "A6eTo",
-          "x": 57,
-          "y": 38,
+          "x": 13.565547431980121,
+          "y": 11,
           "name": "Home Wireframe",
-          "width": 1980,
-          "height": 1837,
+          "rotation": -0.04872312400376324,
+          "width": 1992,
+          "height": 1898,
           "layout": "vertical",
           "gap": 24,
           "children": [
@@ -685,8 +683,13 @@
               "type": "frame",
               "id": "KWkAq",
               "name": "topBarRev",
-              "width": 1968,
-              "height": 40,
+              "width": 1991,
+              "height": 147,
+              "fill": "#7F858D",
+              "padding": [
+                10,
+                16
+              ],
               "justifyContent": "space_between",
               "alignItems": "center",
               "children": [
@@ -699,51 +702,17 @@
                     {
                       "type": "text",
                       "id": "KDY9V",
-                      "fill": "#111827",
+                      "fill": "#FFFFFF",
                       "content": "ENCONTRA SP",
                       "fontFamily": "Inter",
-                      "fontSize": 24,
+                      "fontSize": 30,
                       "fontWeight": "700"
                     },
                     {
                       "type": "text",
                       "id": "XyyP9",
-                      "fill": "#6B7280",
+                      "fill": "#EEF2F7",
                       "content": "catalogo profissional de negocios locais",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "500"
-                    }
-                  ]
-                },
-                {
-                  "type": "frame",
-                  "id": "JfMro",
-                  "gap": 14,
-                  "children": [
-                    {
-                      "type": "text",
-                      "id": "1CeEb",
-                      "fill": "#6B7280",
-                      "content": "catalogo",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "500"
-                    },
-                    {
-                      "type": "text",
-                      "id": "lPC0j",
-                      "fill": "#6B7280",
-                      "content": "filtros",
-                      "fontFamily": "Inter",
-                      "fontSize": 12,
-                      "fontWeight": "500"
-                    },
-                    {
-                      "type": "text",
-                      "id": "9iZu4",
-                      "fill": "#6B7280",
-                      "content": "perfis",
                       "fontFamily": "Inter",
                       "fontSize": 12,
                       "fontWeight": "500"
@@ -1051,7 +1020,7 @@
                           "fill": "#FFFFFF",
                           "content": "Buscar negocios",
                           "fontFamily": "Inter",
-                          "fontSize": 14,
+                          "fontSize": 15,
                           "fontWeight": "700"
                         }
                       ]
@@ -1069,7 +1038,7 @@
                       "id": "TdFaj",
                       "width": 190,
                       "height": 52,
-                      "fill": "#EAF3FF",
+                      "fill": "#EEF2FF",
                       "cornerRadius": 16,
                       "layout": "vertical",
                       "padding": [
@@ -1262,7 +1231,7 @@
               "type": "frame",
               "id": "Kh4vy",
               "name": "resultsRev",
-              "width": 1963,
+              "width": 1936,
               "justifyContent": "space_between",
               "alignItems": "center",
               "children": [
@@ -1306,7 +1275,7 @@
             {
               "type": "frame",
               "id": "1vTNn",
-              "width": 1968,
+              "width": 1936,
               "gap": 20,
               "justifyContent": "center",
               "children": [
@@ -1448,7 +1417,7 @@
                         {
                           "type": "frame",
                           "id": "oqIqk",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -1608,7 +1577,7 @@
                         {
                           "type": "frame",
                           "id": "KTD3o",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -1768,7 +1737,7 @@
                         {
                           "type": "frame",
                           "id": "rVYtg",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -1928,7 +1897,7 @@
                         {
                           "type": "frame",
                           "id": "oOvEp",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -1955,7 +1924,8 @@
             {
               "type": "frame",
               "id": "WAEDn",
-              "width": 1968,
+              "width": 1936,
+              "height": 612,
               "gap": 20,
               "justifyContent": "center",
               "children": [
@@ -2097,7 +2067,7 @@
                         {
                           "type": "frame",
                           "id": "PY38d",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -2257,7 +2227,7 @@
                         {
                           "type": "frame",
                           "id": "nykqP",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -2417,7 +2387,7 @@
                         {
                           "type": "frame",
                           "id": "kvIG8",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -2577,7 +2547,7 @@
                         {
                           "type": "frame",
                           "id": "hdxU1",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             9,
@@ -2631,22 +2601,27 @@
               "type": "frame",
               "id": "IiUoZ",
               "width": "fill_container",
+              "fill": "#7F858D",
+              "padding": [
+                10,
+                14
+              ],
               "justifyContent": "space_between",
               "alignItems": "center",
               "children": [
                 {
                   "type": "text",
                   "id": "bGy9g",
-                  "fill": "#111827",
+                  "fill": "#FFFFFF",
                   "content": "ENCONTRA SP",
                   "fontFamily": "Inter",
-                  "fontSize": 16,
+                  "fontSize": 19,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "3V7DS",
-                  "fill": "#9CA3AF",
+                  "fill": "#FFFFFF",
                   "content": "mobile",
                   "fontFamily": "Inter",
                   "fontSize": 11,
@@ -2657,7 +2632,7 @@
             {
               "type": "frame",
               "id": "PvUdT",
-              "width": 350,
+              "width": 394,
               "layout": "vertical",
               "gap": 5,
               "children": [
@@ -2769,7 +2744,7 @@
               "type": "frame",
               "id": "RYWtW",
               "width": "fill_container",
-              "height": 210,
+              "height": 224,
               "fill": "#FAFAFA",
               "cornerRadius": 18,
               "layout": "vertical",
@@ -2860,7 +2835,7 @@
                         {
                           "type": "frame",
                           "id": "kwElF",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 14,
                           "padding": [
                             10,
@@ -3143,7 +3118,7 @@
                         {
                           "type": "frame",
                           "id": "a8448",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             8,
@@ -3292,7 +3267,7 @@
                         {
                           "type": "frame",
                           "id": "JSffw",
-                          "fill": "#EAF3FF",
+                          "fill": "#EEF2FF",
                           "cornerRadius": 999,
                           "padding": [
                             8,
@@ -3328,7 +3303,7 @@
       "name": "encontraSP_MOBILE_perfil",
       "clip": true,
       "width": 430,
-      "height": 2540,
+      "height": 2594,
       "fill": "#FFFFFF",
       "layout": "none",
       "children": [
@@ -3336,9 +3311,10 @@
           "type": "frame",
           "id": "5YtY5",
           "x": 18,
-          "y": 18,
+          "y": 19,
           "name": "Perfil Mobile",
           "width": 394,
+          "height": 2552,
           "layout": "vertical",
           "gap": 16,
           "children": [
@@ -3346,26 +3322,31 @@
               "type": "frame",
               "id": "5zPb2",
               "width": "fill_container",
+              "fill": "#7F858D",
+              "padding": [
+                10,
+                14
+              ],
               "justifyContent": "space_between",
               "alignItems": "center",
               "children": [
                 {
                   "type": "text",
                   "id": "PAFRN",
-                  "fill": "#111827",
+                  "fill": "#FFFFFF",
                   "content": "ENCONTRA SP",
                   "fontFamily": "Inter",
-                  "fontSize": 16,
+                  "fontSize": 19,
                   "fontWeight": "700"
                 },
                 {
                   "type": "text",
                   "id": "1d1yt",
-                  "fill": "#9CA3AF",
-                  "content": "mobile",
+                  "fill": "#FFFFFF",
+                  "content": "× Fechar",
                   "fontFamily": "Inter",
-                  "fontSize": 11,
-                  "fontWeight": "500"
+                  "fontSize": 13,
+                  "fontWeight": "700"
                 }
               ]
             },
@@ -3380,7 +3361,7 @@
             {
               "type": "frame",
               "id": "OxhcQ",
-              "width": 350,
+              "width": 394,
               "layout": "vertical",
               "gap": 5,
               "children": [
@@ -3397,6 +3378,8 @@
                   "type": "text",
                   "id": "Qvsgl",
                   "fill": "#6B7280",
+                  "textGrowth": "fixed-width",
+                  "width": 394,
                   "content": "Atendimento consultivo e preventivo com servicos organizados para leitura rapida e decisao direta.",
                   "fontFamily": "Inter",
                   "fontSize": 12,
@@ -3717,7 +3700,7 @@
                     {
                       "type": "frame",
                       "id": "q5N98",
-                      "fill": "#EAF3FF",
+                      "fill": "#EEF2FF",
                       "cornerRadius": 999,
                       "padding": [
                         8,
@@ -3743,12 +3726,14 @@
                   "id": "3TR07",
                   "fill": "#E5E7EB",
                   "width": "fill_container",
-                  "height": 220
+                  "height": 176
                 },
                 {
                   "type": "text",
-                  "id": "wWymX",
+                  "id": "69wMg",
                   "fill": "#6B7280",
+                  "textGrowth": "fixed-width",
+                  "width": 368,
                   "content": "Rua Conselheiro Moreira de Barros, 2450 - Santana, Sao Paulo - SP, 02430-001",
                   "fontFamily": "Inter",
                   "fontSize": 13,
@@ -3760,7 +3745,8 @@
               "type": "frame",
               "id": "wkLgB",
               "width": "fill_container",
-              "fill": "#F7F8FA",
+              "height": 292,
+              "fill": "#ECEFF2",
               "cornerRadius": 18,
               "layout": "vertical",
               "gap": 10,
@@ -3776,23 +3762,17 @@
                   "fontWeight": "800"
                 },
                 {
-                  "type": "text",
-                  "id": "AdfKj",
-                  "fill": "#6B7280",
-                  "content": "WhatsApp: (11) 99999-0004 · E-mail: contato@eixobemestar.com · Instagram: @eixobemestar · Site: www.eixobemestar.com",
-                  "fontFamily": "Inter",
-                  "fontSize": 13,
-                  "fontWeight": "normal"
-                },
-                {
                   "type": "frame",
                   "id": "8VykM",
+                  "height": 29,
                   "fill": "#EAF7EC",
                   "cornerRadius": 999,
+                  "gap": 8,
                   "padding": [
                     9,
                     12
                   ],
+                  "alignItems": "center",
                   "children": [
                     {
                       "type": "text",
@@ -3800,8 +3780,67 @@
                       "fill": "#2F7D46",
                       "content": "Entrar em contato por WhatsApp",
                       "fontFamily": "Inter",
-                      "fontSize": 11,
+                      "fontSize": 12,
                       "fontWeight": "700"
+                    }
+                  ]
+                },
+                {
+                  "type": "text",
+                  "id": "AdfKj",
+                  "fill": "#6B7280",
+                  "textGrowth": "fixed-width",
+                  "width": 341,
+                  "content": "WhatsApp: (11) 99999-0004 · \nE-mail: contato@eixobemestar.com · \nInstagram: @eixobemestar · \nSite: www.eixobemestar.com",
+                  "fontFamily": "Inter",
+                  "fontSize": 13,
+                  "fontWeight": "normal"
+                },
+                {
+                  "type": "frame",
+                  "id": "QG0s0",
+                  "name": "hours",
+                  "width": "fill_container",
+                  "fill": "#ECEFF2",
+                  "cornerRadius": 18,
+                  "layout": "vertical",
+                  "gap": 4,
+                  "children": [
+                    {
+                      "type": "text",
+                      "id": "QlP5m",
+                      "fill": "#111827",
+                      "content": "Horario de funcionamento",
+                      "fontFamily": "Inter",
+                      "fontSize": 16,
+                      "fontWeight": "800"
+                    },
+                    {
+                      "type": "text",
+                      "id": "6VelX",
+                      "fill": "#6B7280",
+                      "content": "Segunda a sexta: 09:00 - 18:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "10thf",
+                      "fill": "#6B7280",
+                      "content": "Sabado: 09:00 - 13:00",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
+                    },
+                    {
+                      "type": "text",
+                      "id": "VVSss",
+                      "fill": "#6B7280",
+                      "content": "Domingo: fechado",
+                      "fontFamily": "Inter",
+                      "fontSize": 13,
+                      "fontWeight": "normal"
                     }
                   ]
                 }

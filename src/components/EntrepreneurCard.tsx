@@ -12,10 +12,10 @@ export function EntrepreneurCard({ entrepreneur }: EntrepreneurCardProps) {
   return (
     <Link
       href={`/empreendedor/${entrepreneur.id}`}
-      className="group block overflow-hidden rounded-[18px] border border-black/8 bg-white transition duration-200 hover:-translate-y-0.5 hover:shadow-soft"
+      className="group block overflow-hidden rounded-[14px] border border-[#e5e7eb] bg-white transition duration-200 hover:-translate-y-0.5 hover:shadow-soft"
     >
       <article>
-        <div className="aspect-square overflow-hidden bg-[#eef0f3]">
+        <div className="aspect-square overflow-hidden bg-[#e5e7eb]">
           <img
             src={entrepreneur.image}
             alt={`Capa do negocio ${entrepreneur.name}`}
@@ -23,19 +23,15 @@ export function EntrepreneurCard({ entrepreneur }: EntrepreneurCardProps) {
           />
         </div>
 
-        <div className="space-y-3 p-3">
-          <div className="space-y-2">
-            <div className="flex items-center justify-between gap-3">
-              <span className="rounded-full bg-[#f3f4f6] px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.14em] text-ink/68">
-                {entrepreneur.category}
-              </span>
-              <span className="text-[11px] text-ink/48">{entrepreneur.distanceKm} km</span>
+        <div className="space-y-2.5 p-3">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <p className="text-[10px] text-ink/38">
+                {entrepreneur.category} · {entrepreneur.region}
+              </p>
+              <h2 className="mt-1 text-[14px] font-semibold leading-5 tracking-tight text-ink">{entrepreneur.name}</h2>
             </div>
-
-            <div>
-              <h2 className="text-[15px] font-semibold leading-5 tracking-tight text-ink">{entrepreneur.name}</h2>
-              <p className="mt-1 text-[12px] text-ink/52">{entrepreneur.region}</p>
-            </div>
+            <span className="shrink-0 text-[10px] text-ink/38">{entrepreneur.distanceKm} km</span>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -44,9 +40,9 @@ export function EntrepreneurCard({ entrepreneur }: EntrepreneurCardProps) {
             ))}
           </div>
 
-          <div className="flex items-center justify-between gap-3 border-t border-black/8 pt-2.5">
-            <span className="text-[11px] text-ink/48">Acessar perfil</span>
-            <span className="rounded-full bg-[#e9f2ff] px-3 py-1.5 text-[11px] font-semibold text-[#3157d5] transition hover:bg-[#dcebff]">
+          <div className="flex items-center justify-between gap-3 border-t border-[#e5e7eb] pt-2.5">
+            <span className="text-[10px] text-ink/38">Acessar perfil</span>
+            <span className="rounded-full bg-[#eef2ff] px-3 py-1 text-[10px] font-semibold text-[#3157d5] transition hover:bg-[#dcebff]">
               Ver perfil
             </span>
           </div>
