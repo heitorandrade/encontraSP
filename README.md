@@ -1,6 +1,6 @@
 # Encontra SP
 
-Frontend MVP para descoberta de negocios cadastrados no Sebrae, com foco em catalogo, busca, filtros simples e pagina de perfil.
+Frontend MVP para descoberta de negocios cadastrados no Sebrae, com foco em landing inicial, catalogo, busca, filtros simples e pagina de perfil.
 
 ## Stack
 
@@ -11,12 +11,12 @@ Frontend MVP para descoberta de negocios cadastrados no Sebrae, com foco em cata
 
 ## Estrutura
 
-- `src/app`: rotas da home e do perfil
+- `src/app`: rotas da landing, do catalogo e do perfil
 - `src/components`: busca, filtros, cards e tags
 - `src/data`: mocks da listagem leve e do perfil completo
 - `src/types`: tipagens do dominio
 - `scripts/start-local.ps1`: automacao local de build + restart + validacao
-- `encontra_sp_frames_v2.pen`: wireframes desktop e mobile
+- `encontra_sp_frames.pen`: wireframes desktop e mobile
 - `src/Maps_referencia.png`: imagem de referencia usada no bloco de localizacao do perfil
 
 ## Como rodar
@@ -74,11 +74,13 @@ Na pratica, o fluxo mais confiavel para este projeto e:
 
 ## Funcionalidades atuais
 
-- home responsiva inspirada no wireframe do Pencil
+- landing hero responsiva inspirada no wireframe do Pencil
+- catalogo responsivo em `/explorar`
 - header em tom metalico com variacao desktop/mobile
 - busca por localidade e intencao
 - filtros por distancia, categoria, regiao, especialidade e ordenacao
 - listagem em cards com imagem quadrada `1:1`
+- carrossel automatico com 3 imagens urbanas no hero
 - perfil individual por empreendedor
 - retorno para a home via `× Fechar`
 - lista de servicos como foco principal da pagina de perfil
@@ -88,15 +90,16 @@ Na pratica, o fluxo mais confiavel para este projeto e:
 
 ## Estado atual da interface
 
-- a home usa uma listagem leve derivada de `src/data/entrepreneur-summaries.ts`
+- a landing inicial fica em `/`
+- o catalogo em `/explorar` usa uma listagem leve derivada de `src/data/entrepreneur-summaries.ts`
 - o perfil usa `src/data/entrepreneurs.ts`, com servicos e contatos completos
-- o layout web atual tenta seguir o arquivo `encontra_sp_frames_v2.pen`
+- o layout web atual tenta seguir o arquivo `encontra_sp_frames.pen`
 - o CTA de WhatsApp no codigo esta sem icone local no momento
 
 ## Arquivos de design
 
 O projeto inclui o arquivo de wireframe:
 
-- `encontra_sp_frames_v2.pen`
+- `encontra_sp_frames.pen`
 
 Ele serve como referencia visual para a interface web e para futuras iteracoes no OpenPencil.
