@@ -1,6 +1,7 @@
 "use client";
 
 import Image, { StaticImageData } from "next/image";
+import Link from "next/link";
 import { useEffect, useMemo, useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import type { FormEvent } from "react";
@@ -95,7 +96,7 @@ export function HeroLanding() {
         <div className="overflow-hidden bg-white md:rounded-[22px] md:shadow-soft">
           <div className="flex items-center justify-between bg-[#7f858d] px-[14px] py-[10px] md:px-[18px] md:py-[10px]">
             <div className="space-y-[2px]">
-              <p className="text-[12px] font-bold uppercase tracking-[0.08em] text-white md:text-[18px]">Encontra SP</p>
+              <Link href="/" className="text-[12px] font-bold uppercase tracking-[0.08em] text-white md:text-[18px]">Encontra SP</Link>
               <p className="text-[10px] font-medium text-[#eef2f7]">catalogo profissional de negocios locais</p>
             </div>
 
