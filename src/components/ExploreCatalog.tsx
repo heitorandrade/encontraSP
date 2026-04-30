@@ -93,6 +93,16 @@ export function ExploreCatalog({
   const featuredEntrepreneurs = visibleEntrepreneurs.slice(0, 4);
   const remainingEntrepreneurs = visibleEntrepreneurs.slice(4);
 
+  const hasActiveFilters =
+    selectedCategory !== "" ||
+    selectedRegion !== "" ||
+    selectedTag !== "" ||
+    normalizedQuerySearch !== "" ||
+    normalizedLocationSearch !== "" ||
+    isLocalized;
+
+  const showFeatured = !hasActiveFilters || visibleEntrepreneurs.length > 4;
+
   return (
     <main className="min-h-screen bg-white pb-14">
       <section className="bg-[#7f858d]">
@@ -202,39 +212,36 @@ export function ExploreCatalog({
         </div>
 
         {visibleEntrepreneurs.length > 0 ? (
-          <>
-            <div className="grid gap-3 sm:grid-cols-2 xl:hidden">
-              {visibleEntrepreneurs.map((entrepreneur, index) => (
-                <EntrepreneurCard key={entrepreneur.id} entrepreneur={entrepreneur} isFeatured={index < 4} />
-              ))}
-            </div>
-
-            <div className="hidden xl:flex xl:items-stretch xl:gap-3">
-              {featuredEntrepreneurs.map((entrepreneur) => (
-                <div
-                  key={entrepreneur.id}
-                  className="min-w-0 flex-[1_1_0%] transition-[flex-grow] duration-500 ease-out hover:flex-[1.33_1_0%]"
-                >
-                  <EntrepreneurCard entrepreneur={entrepreneur} isFeatured />
+          showFeatured ? (
+            <>
+              {featuredEntrepreneurs.length > 0 && (
+                <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+                  {featuredEntrepreneurs.map((entrepreneur) => (
+                    <EntrepreneurCard key={entrepreneur.id} entrepreneur={entrepreneur} isFeatured />
+                  ))}
                 </div>
+              )}
+              {remainingEntrepreneurs.length > 0 && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+                  {remainingEntrepreneurs.map((entrepreneur) => (
+                    <EntrepreneurCard key={entrepreneur.id} entrepreneur={entrepreneur} />
+                  ))}
+                </div>
+              )}
+            </>
+          ) : (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
+              {visibleEntrepreneurs.map((entrepreneur) => (
+                <EntrepreneurCard key={entrepreneur.id} entrepreneur={entrepreneur} />
               ))}
             </div>
-
-            {remainingEntrepreneurs.length > 0 ? (
-              <div className="hidden xl:mt-3 xl:grid xl:grid-cols-4 xl:gap-3">
-                {remainingEntrepreneurs.map((entrepreneur) => (
-                  <EntrepreneurCard key={entrepreneur.id} entrepreneur={entrepreneur} />
-                ))}
-              </div>
-            ) : null}
-          </>
+          )
         ) : (
           <div className="rounded-[22px] bg-[#fafafa] px-6 py-12 text-center">
             <p className="text-lg font-semibold text-ink">Nenhum negocio encontrado.</p>
             <p className="mt-2 text-sm leading-6 text-ink/56">Ajuste a busca ou remova filtros para explorar outros perfis.</p>
           </div>
         )}
-      </section>
-    </main>
+        </section>    </main>
   );
 }
