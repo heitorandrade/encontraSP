@@ -38,6 +38,7 @@ export function EntrepreneurCard({ entrepreneur, isFeatured = false }: Entrepren
           {isFeatured ? (
             <>
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(17,24,39,0)_0%,rgba(17,24,39,0.16)_100%)]" />
+              <div className="pointer-events-none absolute inset-0 bg-white opacity-0 transition-opacity duration-500 group-hover:opacity-60" />
               <div className="pointer-events-none absolute inset-y-0 left-[-30%] w-[34%] rotate-[14deg] bg-[linear-gradient(180deg,rgba(255,255,255,0)_0%,rgba(255,244,214,0.38)_45%,rgba(255,255,255,0)_100%)] opacity-0 transition-all duration-700 group-hover:left-[108%] group-hover:opacity-100" />
               <div className="absolute left-3 top-3 rounded-full border border-[#e2cf93] bg-[#fff7dc]/92 px-2.5 py-1 text-[9px] font-semibold uppercase tracking-[0.16em] text-[#8b6a1d]">
                 Destaque
