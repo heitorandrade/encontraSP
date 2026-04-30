@@ -20,7 +20,7 @@ export function EntrepreneurCard({ entrepreneur, isFeatured = false }: Entrepren
       }`}
     >
       <article
-        className={`relative h-full ${isFeatured ? "grid grid-cols-1 transition-[grid-template-columns] duration-500 ease-out group-hover:grid-cols-[0.92fr_1.08fr]" : ""}`}
+        className={`relative h-full ${isFeatured ? "xl:grid xl:grid-cols-1 xl:transition-[grid-template-columns] xl:duration-500 xl:ease-out xl:group-hover:grid-cols-[0.92fr_1.08fr]" : ""}`}
       >
         {isFeatured ? (
           <div className="pointer-events-none absolute inset-x-0 top-0 h-[1px] bg-[linear-gradient(90deg,rgba(226,205,147,0)_0%,rgba(226,205,147,0.9)_50%,rgba(226,205,147,0)_100%)] opacity-70 transition duration-500 group-hover:opacity-100" />
