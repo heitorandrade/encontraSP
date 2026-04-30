@@ -13,8 +13,8 @@ const createSquarePlaceholder = (title: string, accent: string, shade: string) =
       <circle cx="455" cy="145" r="76" fill="rgba(255,255,255,0.18)" />
       <circle cx="160" cy="460" r="112" fill="rgba(255,255,255,0.12)" />
       <rect x="64" y="360" width="472" height="104" rx="20" fill="rgba(255,255,255,0.16)" />
-      <text x="300" y="220" fill="white" font-family="Georgia, serif" font-size="38" letter-spacing="1.5" text-anchor="middle">ENCONTRA SP</text>
-      <text x="300" y="300" fill="white" font-family="Arial, sans-serif" font-size="54" font-weight="700" text-anchor="middle">${title}</text>
+      <text x="64" y="176" fill="white" font-family="Georgia, serif" font-size="38" letter-spacing="1.5">ENCONTRA SP</text>
+      <text x="64" y="252" fill="white" font-family="Arial, sans-serif" font-size="54" font-weight="700">${title}</text>
     </svg>
   `)}`;
 
