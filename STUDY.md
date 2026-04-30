@@ -73,15 +73,19 @@ src/
   app/
     layout.tsx
     globals.css
-    page.tsx
+    page.tsx              # landing hero
     not-found.tsx
+    explorar/
+      page.tsx            # catalogo com busca e filtros
     empreendedor/
       [id]/
-        page.tsx
+        page.tsx          # perfil do negocio
   components/
+    HeroLanding.tsx       # hero da landing com carrossel
+    ExploreCatalog.tsx    # catalogo client-side
     SearchBar.tsx
     FilterBar.tsx
-    EntrepreneurCard.tsx
+    EntrepreneurCard.tsx  # card com suporte a "isFeatured"
     Tag.tsx
   data/
     entrepreneur-summaries.ts
@@ -105,20 +109,44 @@ Modelo mental:
 
 ## O fluxo completo da aplicação
 
-### Fluxo da home
+### Fluxo da landing → catálogo
 
-Arquivo principal:
+O projeto tem duas experiências principais em sequência:
 
-- [src/app/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/page.tsx)
+**1. Landing (`/`)**
 
-Fluxo:
+Arquivo: [src/app/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/page.tsx)
+
+Renderiza [src/components/HeroLanding.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/HeroLanding.tsx):
+
+- carrossel automático de 3 imagens urbanas
+- campo de busca por localização
+- botões "Buscar serviços" e "Usar minha localização"
+- ao submeter, navega para `/explorar` com parâmetros opcionais de localização
+
+**2. Catálogo (`/explorar`)**
+
+Arquivo: [src/app/explorar/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/explorar/page.tsx)
+
+Renderiza [src/components/ExploreCatalog.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/ExploreCatalog.tsx):
 
 1. importa `entrepreneurSummaries`
 2. deriva listas auxiliares como categorias, regiões e tags
 3. guarda o estado dos filtros com `useState`
 4. filtra a lista com `filter`
-5. ordena a lista com `sort`
-6. renderiza os componentes da home
+5. ordena com `sort`
+6. divide em `featuredEntrepreneurs` (4 primeiros) e `remainingEntrepreneurs`
+7. detecta `hasActiveFilters` para decidir se exibe cards como destaque
+8. renderiza grid(s) de `EntrepreneurCard` com ou sem `isFeatured`
+
+### Cards em destaque
+
+Os 4 primeiros resultados do catálogo são marcados com `isFeatured`:
+
+- visual diferenciado (borda dourada, gradiente, badge "Destaque")
+- altura reduzida em ~1/3 (sem o bloco extra de signals/offerings)
+- no hover em telas `xl`: expande para 2 colunas (imagem + conteúdo lado a lado)
+- quando filtros ativos e ≤ 4 resultados: os cards featured usam tamanho padrão
 
 ### Fluxo do perfil
 
@@ -152,6 +180,7 @@ Ele não tem:
 ### Rotas de página atuais
 
 - `/` -> [src/app/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/page.tsx)
+- `/explorar` -> [src/app/explorar/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/explorar/page.tsx)
 - `/empreendedor/[id]` -> [src/app/empreendedor/[id]/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/empreendedor/[id]/page.tsx)
 
 Exemplo real:
@@ -1253,11 +1282,14 @@ Ordem recomendada:
 3. [src/data/entrepreneurs.ts](C:/Users/Heitor/projetos/encontraSP/src/data/entrepreneurs.ts)
 4. [src/components/Tag.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/Tag.tsx)
 5. [src/components/EntrepreneurCard.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/EntrepreneurCard.tsx)
-6. [src/components/SearchBar.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/SearchBar.tsx)
-7. [src/components/FilterBar.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/FilterBar.tsx)
-8. [src/app/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/page.tsx)
-9. [src/app/empreendedor/[id]/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/empreendedor/[id]/page.tsx)
-10. [scripts/start-local.ps1](C:/Users/Heitor/projetos/encontraSP/scripts/start-local.ps1)
+6. [src/components/HeroLanding.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/HeroLanding.tsx)
+7. [src/components/SearchBar.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/SearchBar.tsx)
+8. [src/components/FilterBar.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/FilterBar.tsx)
+9. [src/components/ExploreCatalog.tsx](C:/Users/Heitor/projetos/encontraSP/src/components/ExploreCatalog.tsx)
+10. [src/app/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/page.tsx)
+11. [src/app/explorar/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/explorar/page.tsx)
+12. [src/app/empreendedor/[id]/page.tsx](C:/Users/Heitor/projetos/encontraSP/src/app/empreendedor/[id]/page.tsx)
+13. [scripts/start-local.ps1](C:/Users/Heitor/projetos/encontraSP/scripts/start-local.ps1)
 
 Essa ordem ajuda porque vai:
 

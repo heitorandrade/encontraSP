@@ -27,50 +27,20 @@ Instale as dependencias:
 npm install
 ```
 
-Para subir de forma automatizada, com encerramento de processo antigo na `3000`, rebuild e validacao de `localhost`, use:
+Para subir de forma automatizada:
 
 ```powershell
 npm run start:local
 ```
 
-Esse comando:
+Veja o guia completo em [START_LOCAL.md](./START_LOCAL.md).
 
-- roda `npm run build`
-- encerra uma instancia antiga na porta `3000`, se existir
-- sobe uma nova instancia local
-- valida `HTTP 200`
-- valida a home por marcadores basicos de conteudo
-- deixa o servico pronto para abrir em `http://localhost:3000`
+## Documentação
 
-Depois abra:
-
-```text
-http://localhost:3000
-```
-
-## Execucao manual
-
-Se quiser rodar manualmente:
-
-```powershell
-npm run dev -- --port 3000
-```
-
-Ou, para validacao local mais estavel:
-
-```powershell
-npm run preview
-```
-
-Use `npm run preview` quando quiser testar a versao local com `next start` em vez de `next dev`.
-
-## Fluxo Recomendado
-
-Na pratica, o fluxo mais confiavel para este projeto e:
-
-1. `npm run start:local`
-2. Abrir `http://localhost:3000`
-3. Reiniciar com `npm run start:local` se houver qualquer instabilidade na porta ou na pagina
+- [START_LOCAL.md](./START_LOCAL.md) — guia rápido para subir o projeto localmente
+- [STUDY.md](./STUDY.md) — estudo aprofundado do código, arquitetura e decisões
+- [ARCHITECTURE.md](./ARCHITECTURE.md) — visão estrutural do projeto
+- [AGENTS.md](./AGENTS.md) — checklist de validação de servidor local
 
 ## Funcionalidades atuais
 
