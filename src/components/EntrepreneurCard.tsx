@@ -65,6 +65,14 @@ export function EntrepreneurCard({ entrepreneur, isFeatured = false }: Entrepren
                 <Tag key={tag} label={tag} />
               ))}
             </div>
+
+            {isFeatured ? (
+              <div className="hidden space-y-1.5 xl:block">
+                <p className="text-[11px] leading-4 text-ink/56">{entrepreneur.shortDescription}</p>
+                <p className="text-[10px] text-ink/38">{entrepreneur.address}</p>
+                <p className="text-[10px] text-ink/38">{entrepreneur.phone}</p>
+              </div>
+            ) : null}
           </div>
 
           <div className="flex items-center justify-between gap-3 border-t border-[#e5e7eb] pt-2.5">

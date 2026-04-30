@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 
 import { EntrepreneurCard } from "@/components/EntrepreneurCard";
@@ -108,7 +109,7 @@ export function ExploreCatalog({
       <section className="bg-[#7f858d]">
         <div className="mx-auto flex max-w-[1440px] items-start justify-between px-3 py-2.5 sm:px-4 lg:px-[18px]">
           <div className="space-y-0.5">
-            <p className="text-[17px] font-semibold uppercase tracking-[0.08em] text-white sm:text-[18px]">Encontra SP</p>
+            <Link href="/explorar" className="text-[17px] font-semibold uppercase tracking-[0.08em] text-white sm:text-[18px]">Encontra SP</Link>
             <p className="text-[10px] text-[#eef2f7]">catalogo profissional de negocios locais</p>
           </div>
           <div className="hidden items-center gap-4 pt-1 text-[10px] text-white/90 md:flex">
